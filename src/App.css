@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.main:after {
+  background-image: url("src/assets/new1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.place_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-4 pl-12 pr-12 text-lg shadow-lg font-satoshi font-semibold focus:border-blue-500 focus:outline-none focus:ring-0;
+}
+
+.submit_btn {
+  @apply hover:text-blue-950 absolute inset-y-0 right-0 my-1.5 mr-1.5 flex w-10 items-center justify-center rounded  font-sans text-sm font-medium text-blue-500;
+}
+
+.forecast-container {
+  @apply flex justify-around flex-wrap mt-8;
+}
+
+.forecast-card {
+  @apply bg-blue-900 bg-opacity-90 text-white rounded-lg p-4 m-4 w-64 text-center hover:shadow-xl transition-all;
+}
+
+.weather-icon {
+  @apply mx-auto w-16 h-16 mt-2;
+}
