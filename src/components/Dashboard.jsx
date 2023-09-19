@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { API_KEY } from "../config";
 import { FaSun } from "react-icons/fa";
-import { weatherIconMapping } from "../helpers/weatherIcon";
+import { weatherIconMapping } from "../helpers/WeatherIcon";
 
 const Dashboard = () => {
   const [forecasts, setForecasts] = useState([]);
